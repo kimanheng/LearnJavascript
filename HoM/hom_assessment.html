@@ -1,4 +1,4 @@
-<!-- Coded by Kiman Heng-->
+!-- Coded by Kiman Heng-->
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
@@ -50,40 +50,56 @@
       for (var i = 0; i < values.length; i++) {
         for (var s = 0; s < values.length; s++) {
           document.writeln(
-            "(number)" +
+            "(" +
+              typeof values[i] +
+              ")" +
               values[i] +
               " == " +
-              "(number)" +
+              "(" +
+              typeof values[s] +
+              ")" +
               values[s] +
               ": " +
               (values[i] == values[s]) +
               "<br>"
           );
           document.writeln(
-            "(number)" +
+            "(" +
+              typeof values[i] +
+              ")" +
               values[i] +
               " === " +
-              "(number)" +
+              "(" +
+              typeof values[s] +
+              ")" +
               values[s] +
               ": " +
               (values[i] === values[s]) +
               "<br>"
           );
           document.writeln(
-            "(number)" +
+            "(" +
+              typeof values[i] +
+              ")" +
               values[i] +
               " < " +
-              "(number)" +
+              "(" +
+              typeof values[s] +
+              ")" +
               values[s] +
               ": " +
               (values[i] < values[s]) +
               "<br>"
           );
           document.writeln(
-            "(number)" +
+            "(" +
+              typeof values[i] +
+              ")" +
               values[i] +
               " > " +
-              "(number)" +
+              "(" +
+              typeof values[s] +
+              ")" +
               values[s] +
               ": " +
               (values[i] > values[s]) +
@@ -95,40 +111,56 @@
       for (var i = 0; i < values.length; i++) {
         for (var s = 0; s < values.length; s++) {
           document.writeln(
-            "<tr><td>(number)" +
+            "<tr><td>(" +
+              typeof values[i] +
+              ")" +
               values[i] +
               " == " +
-              "(number)" +
+              "(" +
+              typeof values[s] +
+              ")" +
               values[s] +
               ": " +
               (values[i] == values[s]) +
               "</td>"
           );
           document.writeln(
-            "<td>(number)" +
+            "<td><td>(" +
+              typeof values[i] +
+              ")" +
               values[i] +
               " === " +
-              "(number)" +
+              "(" +
+              typeof values[s] +
+              ")" +
               values[s] +
               ": " +
               (values[i] === values[s]) +
               "</td>"
           );
           document.writeln(
-            "<td>(number)" +
+            "<td><td>(" +
+              typeof values[i] +
+              ")" +
               values[i] +
               " < " +
-              "(number)" +
+              "(" +
+              typeof values[s] +
+              ")" +
               values[s] +
               ": " +
               (values[i] < values[s]) +
               "</td>"
           );
           document.writeln(
-            "<td>(number)" +
+            "<td><td>(" +
+              typeof values[i] +
+              ")" +
               values[i] +
               " > " +
-              "(number)" +
+              "(" +
+              typeof values[s] +
+              ")" +
               values[s] +
               ": " +
               (values[i] > values[s]) +
