@@ -47,8 +47,12 @@
         i + ") The type of " + values + " is: " + typeof values + "<br>"
       );
       document.writeln("Elements of values are: " + values.join() + "<br>");
+      
+      <!-- Loop for groups --> 
       for (var i = 0; i < values.length; i++) {
+        <!-- Loop for the first four --> 
         for (var s = 0; s < values.length; s++) {
+          <!-- Compare "==" -->
           document.writeln(
             "(" +
               typeof values[i] +
@@ -63,6 +67,7 @@
               (values[i] == values[s]) +
               "<br>"
           );
+          <!-- Compare "===" -->
           document.writeln(
             "(" +
               typeof values[i] +
@@ -77,6 +82,7 @@
               (values[i] === values[s]) +
               "<br>"
           );
+          <!-- Compare "<" -->
           document.writeln(
             "(" +
               typeof values[i] +
@@ -91,6 +97,7 @@
               (values[i] < values[s]) +
               "<br>"
           );
+          <!-- Compare ">" -->
           document.writeln(
             "(" +
               typeof values[i] +
@@ -107,9 +114,14 @@
           );
         }
       }
+     
+      <!-- Create table -->
       document.writeln("<table>");
+      <!-- Loop in column-->
       for (var i = 0; i < values.length; i++) {
+        <!-- Loop in roow --> 
         for (var s = 0; s < values.length; s++) {
+          <!-- Compare "==" in table -->
           document.writeln(
             "<tr><td>(" +
               typeof values[i] +
@@ -124,6 +136,7 @@
               (values[i] == values[s]) +
               "</td>"
           );
+          <!-- Compare "===" in table -->
           document.writeln(
             "<td>(" +
               typeof values[i] +
@@ -137,7 +150,8 @@
               ": " +
               (values[i] === values[s]) +
               "</td>"
-          );
+          ); 
+          <!-- Compare "<" in table -->
           document.writeln(
             "<td>(" +
               typeof values[i] +
@@ -152,6 +166,7 @@
               (values[i] < values[s]) +
               "</td>"
           );
+          <!-- Compare ">" in table -->
           document.writeln(
             "<td>(" +
               typeof values[i] +
