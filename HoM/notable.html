@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+   <head>
+      <title>JavaScript 07C</title>
+   </head>
+   <body>
+      <script>
+         Array.prototype.toString = function () {
+         let arrStr = "["
+         console.log(this)
+         for (var i=0; i<this.length; i++) {
+         arrStr += this[i]
+         if (i<this.length-1) arrStr += ", "
+         }
+         return (arrStr += "]")
+         }
+         let values = [0, 123, 1.23e2, "12.3e1", true, false, NaN,Infinity, undefined, null, [0]]
+         for (var i=0; i<values.length; i++) {
+         document.writeln(i+") The type of "+values[i]+" is: "+typeof(values[i])+"<br>")
+         }
+         document.writeln(i+") The type of "+values+" is: "+typeof(values)+"<br>")
+         document.writeln("Elements of values are: " + values.join( )+"<br>")
+         
+         for(var i=0; i<values.length; i++){
+            for(var e=0; e<values.length;e++){
+                document.writeln(`(${typeof(values[i])})${values[i]} == (${typeof(values[e])})${values[e]}:`+` ${values[i] == values[e]}`+"<br>" )
+                document.writeln(`(${typeof(values[i])})${values[i]} === (${typeof(values[e])})${values[e]}:`+` ${values[i] === values[e]}`+"<br>")
+                document.writeln(`(${typeof(values[i])})${values[i]} < (${typeof(values[e])})${values[e]}:`+` ${values[i] < values[e]}`+"<br>")
+                document.writeln(`(${typeof(values[i])})${values[i]} > (${typeof(values[e])})${values[e]}:`+` ${values[i] > values[e]}`+"<br>")
+                document.writeln("<br>")
+
+            }
+         }
+      </script>
+      <noscript>JavaScript not supported or disabled</noscript>
+   </body>
+</html>

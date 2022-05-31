@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+   <head>
+      <title>JavaScript 07C</title>
+   </head>
+   <body>
+      <script>
+         Array.prototype.toString = function () {
+         let arrStr = "["
+         console.log(this)
+         for (var i=0; i<this.length; i++) {
+         arrStr += this[i]
+         if (i<this.length-1) arrStr += ", "
+         }
+         return (arrStr += "]")
+         }
+         let values = [0, 123, 1.23e2, "12.3e1", true, false, NaN,Infinity, undefined, null, [0]]
+         for (var i=0; i<values.length; i++) {
+         document.writeln(i+") The type of "+values[i]+" is: "+typeof(values[i])+"<br>")
+         }
+         document.writeln(i+") The type of "+values+" is: "+typeof(values)+"<br>")
+         document.writeln("Elements of values are: " + values.join()+"<br>")
+         
+         for(var i=0; i<values.length; i++){
+            for(var e=0; e<values.length;e++){
+               
+               let first = (`(${typeof(values[i])})${values[i]} == (${typeof(values[e])})${values[e]}:`+` ${values[i] == values[e]}`)
+               let second =(`(${typeof(values[i])})${values[i]} === (${typeof(values[e])})${values[e]}:`+` ${values[i] === values[e]}`)
+               let third = (`(${typeof(values[i])})${values[i]} < (${typeof(values[e])})${values[e]}:`+` ${values[i] < values[e]}`)
+               let fourth = (`(${typeof(values[i])})${values[i]} > (${typeof(values[e])})${values[e]}:`+` ${values[i] > values[e]}`)
+               let body = document.getElementsByTagName("body")[0];
+               let tbl = document.createElement("table");
+               let tblBody = document.createElement("tbody");
+               let row = document.createElement("tr");
+
+               let cell0 = document.createElement("td");
+               let cellText0 = document.createTextNode(first);
+               cell0.appendChild(cellText0);
+
+               let cell1 = document.createElement("td");
+               let cellText1 = document.createTextNode(second);
+               cell1.appendChild(cellText1);
+
+               let cell2 = document.createElement("td");
+               let cellText2 = document.createTextNode(third);
+               cell2.appendChild(cellText2);
+
+               let cell3 = document.createElement("td");
+               let cellText3 = document.createTextNode(fourth);
+               cell3.appendChild(cellText3);
+
+
+               row.appendChild(cell0);
+               row.appendChild(cell1);
+               row.appendChild(cell2);
+               row.appendChild(cell3);
+
+
+               tblBody.appendChild(row);
+               tbl.appendChild(tblBody);
+               body.appendChild(tbl);
+               tbl.setAttribute("border", "2");
+
+
+         //https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+            }
+         }
+      </script>
+      <noscript>JavaScript not supported or disabled</noscript>
+   </body>
+</html>
+
